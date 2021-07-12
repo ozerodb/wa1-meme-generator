@@ -17,7 +17,7 @@ function Meme(props) {
                 <Image src={memeInfo.template} style={{ width: '100%' }} />
                 {memeInfo.texts.map((t, i) =>
                     <div key={i} style={{ position: 'absolute', left: t.x, top: t.y, textAlign: 'center', width: '100%', maxWidth: '32%' }}>
-                        <p style={{ position: 'relative', left: '-50%', fontSize: 18 }}>{t.text}</p>
+                        <p style={{ position: 'relative', left: '-50%', fontSize: 19 }}>{t.text}</p>
                     </div>
                 )}
             </div>
