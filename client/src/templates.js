@@ -26,20 +26,22 @@ export const templates = [
     {
       src: "templates/t3-Panik-Kalm-Panik.png",
       name:"3 - Panik Kalm Panik",
-      x1: '25%',
+      x1: '26%',
       y1: '14%',
-      x2: '25%',
+      x2: '26%',
       y2: '48%',
-      x3: '25%',
+      x3: '26%',
       y3: '81%'
     },
     {
       src: "templates/t4-trade-offer.jpg",
       name:"4 - Trade offer",
       x1: '23%',
-      y1: '23%',
+      y1: '25%',
       x2: '72%',
-      y2: '23%'
+      y2: '25%',
+      x3: '50%',
+      y3: '65%'
     },
     {
       src: "templates/t5-Tuxedo-Winnie-The-Pooh.png",

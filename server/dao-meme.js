@@ -1,5 +1,5 @@
 'use strict';
-/* Data Access Object (DAO) module for accessing tasks */
+/* Data Access Object (DAO) module for accessing memes */
 
 const sqlite = require('sqlite3');
 

@@ -62,7 +62,7 @@ app.use(passport.session());
 
 // activate the server
 app.listen(port, () => {
-  console.log(`meme.boh server listening at http://localhost:${port}`);
+  console.log(`memator server listening at http://localhost:${port}`);
 });
 
 
@@ -122,7 +122,7 @@ app.delete('/api/memes/:id', isLoggedIn, async (req, res) => {
     await memeDao.deleteMeme(req.params.id, req.user.id);
     res.status(204).end();
   } catch (err) {
-    res.status(503).json({ error: `Database error during the deletion of meme ${req.params.id}.` });
+    res.status(500).json({ error: `Database error during the deletion of meme ${req.params.id}.` });
   }
 });
 
@@ -135,6 +135,6 @@ app.post('/api/new_meme', isLoggedIn, async (req, res) => {
     await memeDao.createMeme(meme);
     res.status(201).end();
   } catch (err) {
-    res.status(503).json({ error: `Database error during the creation of meme ${meme.title}.` });
+    res.status(500).json({ error: `Database error during the creation of meme ${meme.title}.` });
   }
 });

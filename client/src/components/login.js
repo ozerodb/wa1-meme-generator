@@ -22,7 +22,7 @@ function LoginComponent(props) {
     return (
         
         <div className="center-block flex-column" id="login-container">
-            <Link to="/" className="d-flex flex-column justify-content-center"><Image src="trollface.svg" width="10%" className="m-auto"/><h1 className="pb-5 mx-auto text-black-50">Memes</h1></Link>
+            <Link to="/" className="d-flex flex-column justify-content-center"><Image src="trollface.svg" width="10%" className="m-auto"/><h1 className="pb-5 mx-auto text-black-50">Memator</h1></Link>
             <Form noValidate validated={validated} onSubmit={handleLogin} className="w-50">
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>

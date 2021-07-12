@@ -49,7 +49,7 @@ function App() {
       setChanged(true);
       setUserInfo(userInfo);
     } catch (err) {
-      console.log(err);
+      console.error(err);
       setMessage({ msg: `${err}`, type: 'text-danger' });
     }
   };
@@ -110,11 +110,10 @@ function App() {
                     <Route exact path="/memes" render={() => (
                       <>
                         <Container id="memelist-container">
-                          <Row className="d-flex justify-content-between w-100 my-2 align-items-center">
+                          <Row className="d-flex justify-content-between w-100 mb-3 align-items-center">
                             <h1 className="inline">Your daily dose of memes</h1>
                             {loggedIn && <Link to='/create'><Button variant="success"><i className="fas fa-plus"></i>  New Meme</Button></Link>}
                           </Row>
-
                           <MemesList userInfo={userInfo} memesInfos={memesInfos} setCurrentMeme={setCurrentMeme} setShowModal={setShowModal} deleteMeme={deleteMeme} />
                           {showModal && <MemeModal userInfo={userInfo} meme={MemeCombiner(memesInfos[currentMeme], templates[memesInfos[currentMeme].templateId])} memeInfo={memesInfos[currentMeme]} templates={templates} showModal={showModal} setShowModal={setShowModal} />}
                         </Container>
@@ -122,11 +121,22 @@ function App() {
                     )} />
 
                     <Route exact path="/create" render={() => (
-                      <Container id="memecreator-container">
+                      <>
                         {loggedIn ?
-                          <MemeCreator userInfo={userInfo} templates={templates} createMeme={createMeme} /> :
+                          <>
+                            <Container id="memelist-container">
+                              <Row className="d-flex justify-content-between w-100 mb-3 align-items-center">
+                                <h1 className="inline">Your daily dose of memes</h1>
+                                {loggedIn && <Link to='/create'><Button variant="success"><i className="fas fa-plus"></i>  New Meme</Button></Link>}
+                              </Row>
+                              <MemesList userInfo={userInfo} memesInfos={memesInfos} setCurrentMeme={setCurrentMeme} setShowModal={setShowModal} deleteMeme={deleteMeme} />
+                              </Container>
+                            <Container id="memecreator-container">
+                              <MemeCreator userInfo={userInfo} templates={templates} createMeme={createMeme} />
+                            </Container>
+                          </> :
                           <Redirect to='/login' />}
-                      </Container>
+                      </>
                     )} />
 
                     <Route path="/" render={() => (

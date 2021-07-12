@@ -9,7 +9,7 @@ function AppNavbar(props) {
                 <Link to="/" >
                     <Navbar.Brand style={{'fontSize':32}} className="d-flex flex-row align-content-center text-decoration-none">
                         <img src="trollface.svg" width="56" height="48" alt="trollface"></img>
-                        <p className="m-0">Memes</p>
+                        <p className="m-0">Memator</p>
                     </Navbar.Brand>
                 </Link>
                 <>{userInfo !== undefined ?
