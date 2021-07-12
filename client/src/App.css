@@ -57,6 +57,10 @@ html, #root {
 a:hover{
     text-decoration: none;
 }
+.memelist-item{
+  width: 50%;
+  min-width:fit-content;
+}
 .memelist-item:hover{
     cursor: pointer;
 }
