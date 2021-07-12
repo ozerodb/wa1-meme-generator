@@ -17,7 +17,7 @@ function Meme(props) {
                 <Image src={memeInfo.template} style={{ width: '100%' }} />
                 {memeInfo.texts.map((t, i) =>
                     <div key={i} style={{ position: 'absolute', left: t.x, top: t.y, textAlign: 'center', width: '100%', maxWidth: '32%' }}>
-                        <p style={{ position: 'relative', left: '-50%', fontSize: 19 }}>{t.text}</p>
+                        <p style={{ position: 'relative', left: '-50%', fontSize: 18 }}>{t.text}</p>
                     </div>
                 )}
             </div>
@@ -105,8 +105,8 @@ function MemeCreator(props) {
     const colors = ['#000000', '#FFFFFF', '#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF'];
     const fontFamilies = [
         { name: 'Arial', value: 'Arial, sans-serif' },
-        { name: 'Impact', value: 'Impact, fantasy' },
-        { name: 'Comic Sans', value: 'Comic Sans MS, Comic Sans, cursive' }
+        { name: 'Anton', value: 'Anton, sans-serif' },
+        { name: 'Comic Neue', value: 'Comic Neue, cursive' }
     ]
 
     const [memeInfo, setMemeInfo] = useState(prefill ?

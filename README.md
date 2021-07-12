@@ -56,15 +56,13 @@
   - response body: _an array of memes_
 
     ```json
-    [
-    {"id":21,"title":"This whole exam be like","creatorId":1,"creatorName":"ozerodb","templateId":4,"isPublic":1,"text1":"a fun and interesting exam","text2":"an hecc lot of memes","text3":"","color":"#FFFFFF","fontFamily":"Comic Sans MS, Comic Sans, cursive"},
+    [{"id":21,"title":"This whole exam be like","creatorId":1,"creatorName":"ozerodb","templateId":4,"isPublic":1,"text1":"a fun and interesting exam","text2":"an hecc lot of memes","text3":"","color":"#FFFFFF","fontFamily":"Comic Neue, cursive"},
     {"id":23,"title":"Oh no..","creatorId":3,"creatorName":"mario","templateId":3,"isPublic":1,"text1":"The exam went poorly","text2":"You scored a 10","text3":"It's out of 30","color":"#FF0000","fontFamily":"Arial, sans-serif"},
-    {"id":25,"title":"I love them","creatorId":2,"creatorName":"john","templateId":0,"isPublic":1,"text1":"Inline conditionals aren't less readable","text2":"","text3":"","color":"#0000FF","fontFamily":"Impact, fantasy"},
-    {"id":26,"title":"Please don't do this to me","creatorId":2,"creatorName":"john","templateId":6,"isPublic":1,"text1":"accept a bad grade","text2":"","text3":"","color":"#FF00FF","fontFamily":"Comic Sans MS, Comic Sans, cursive"},
-    {"id":29,"title":"It's difficult being old","creatorId":3,"creatorName":"mario","templateId":6,"isPublic":1,"text1":"stop doing all-nighters before every exam","text2":"","text3":"","color":"#FF0000","fontFamily":"Comic Sans MS, Comic Sans, cursive"},
+    {"id":25,"title":"I love them","creatorId":2,"creatorName":"john","templateId":0,"isPublic":1,"text1":"Inline conditionals aren't less readable","text2":"","text3":"","color":"#0000FF","fontFamily":"Anton, sans-serif"},
+    {"id":26,"title":"Please don't do this to me","creatorId":2,"creatorName":"john","templateId":6,"isPublic":1,"text1":"accept a bad grade","text2":"","text3":"","color":"#FF00FF","fontFamily":"Comic Neue, cursive"},
+    {"id":29,"title":"It's difficult being old","creatorId":3,"creatorName":"mario","templateId":6,"isPublic":1,"text1":"stop doing all-nighters before every exam","text2":"","text3":"","color":"#FF0000","fontFamily":"Comic Neue, cursive"},
     {"id":30,"title":"LESSSGOOOOO","creatorId":1,"creatorName":"ozerodb","templateId":1,"isPublic":1,"text1":"It's coming home","text2":"It's coming Rome","text3":"","color":"#000000","fontFamily":"Arial, sans-serif"},
-    {"id":32,"title":"Not once, twice :l","creatorId":1,"creatorName":"ozerodb","templateId":3,"isPublic":1,"text1":"you have an exam tomorrow","text2":"you studied a lot and you feel confident in your preparation","text3":"you forgot to book for it","color":"#000000","fontFamily":"Arial, sans-serif"}
-    ]
+    {"id":32,"title":"Not once, twice :l","creatorId":1,"creatorName":"ozerodb","templateId":3,"isPublic":1,"text1":"you have an exam tomorrow","text2":"you studied a lot and you feel confident in your preparation","text3":"you forgot to book for it","color":"#000000","fontFamily":"Arial, sans-serif"}]
     ```
 
 - DELETE `/api/memes/:id`
@@ -75,9 +73,9 @@
   - request body: _a meme object_
 
   ```json
-  {"title":"Example","creatorId":1,"creatorName":"ozerodb","templateId":0,"isPublic":1,"text1":"You can't change my mind","text2":"","text3":"","color":"#000000","fontFamily":"Impact, fantasy"},
+  {"title":"Example","creatorId":1,"creatorName":"ozerodb","templateId":0,"isPublic":1,"text1":"You can't change my mind","text2":"","text3":"","color":"#000000","fontFamily":"Anton, sans-serif"},
   ```
-  
+
   - response: `200 OK` or `401 Unauthorized` or `500 Internal Server Error`
   - response body: _None_
 
